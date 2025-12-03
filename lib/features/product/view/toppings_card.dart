@@ -16,6 +16,7 @@ class ToppingsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 110,
+      height: 100,
 
       decoration: BoxDecoration(
         color: const Color(0xFF3A2927),
@@ -48,6 +49,7 @@ class ToppingsCard extends StatelessWidget {
 
             // Bottom dark area with text + button
             Container(
+              height: 40,
               color: const Color(0xFF3A2927), // dark brown
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               child: Row(
