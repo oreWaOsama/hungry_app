@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:hungry_app/core/constants/app_assets.dart';
 import 'package:hungry_app/core/constants/app_colors.dart';
 import 'package:hungry_app/features/cart/widgets/cart_item.dart';
+import 'package:hungry_app/features/checkout/views/checkout_view.dart';
 import 'package:hungry_app/shared/custom_button.dart';
 import 'package:hungry_app/shared/custom_text.dart';
 
@@ -14,7 +15,7 @@ class CartView extends StatefulWidget {
 }
 
 class _CartViewState extends State<CartView> {
- final  int numberOfItems = 20;
+  final int numberOfItems = 20;
   late List<int> numberOfItemsList;
 
   @override
@@ -48,7 +49,7 @@ class _CartViewState extends State<CartView> {
               Gap(25),
               Expanded(
                 child: ListView.separated(
-                    itemCount:numberOfItems,
+                  itemCount: numberOfItems,
                   itemBuilder: (BuildContext context, int index) {
                     return CartItem(
                       imagepath: AppAssets.test2,
@@ -61,7 +62,6 @@ class _CartViewState extends State<CartView> {
                   },
                   separatorBuilder: (BuildContext context, int index) =>
                       Gap(16),
-                
                 ),
               ),
               Row(
@@ -84,7 +84,14 @@ class _CartViewState extends State<CartView> {
                   Spacer(),
                   CustomButton(
                     title: 'Checkout',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CheckoutView(),
+                        ),
+                      );
+                    },
                     width: 200,
                     radius: 20,
                     backgroundColor: AppColors.primary,

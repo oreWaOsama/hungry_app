@@ -9,4 +9,6 @@ class AppAssets {
   static const String test2 = 'assets/details/test2.png';
   static const String minus = 'assets/details/minus.png';
   static const String plus = 'assets/details/plus.png';
+  static const String cash = 'assets/icons/cash.png';
+  static const String visa = 'assets/icons/visa.png';
 }
