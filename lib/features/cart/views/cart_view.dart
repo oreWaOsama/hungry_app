@@ -64,42 +64,62 @@ class _CartViewState extends State<CartView> {
                       Gap(16),
                 ),
               ),
-              Row(
+            ],
+          ),
+        ),
+      ),
+      bottomSheet: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade800,
+              blurRadius: 15,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+
+        height: 100,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+          child: Row(
+            children: [
+              Column(
+                crossAxisAlignment: .start,
                 children: [
-                  Column(
-                    crossAxisAlignment: .start,
-                    children: [
-                      CustomText(
-                        text: 'Total',
-                        size: 24,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      CustomText(
-                        text: '\$${99.19}',
-                        size: 32,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ],
+                  CustomText(
+                    text: 'Total',
+                    size: 24,
+                    fontWeight: FontWeight.w600,
                   ),
-                  Spacer(),
-                  CustomButton(
-                    title: 'Checkout',
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const CheckoutView(),
-                        ),
-                      );
-                    },
-                    width: 200,
-                    radius: 20,
-                    backgroundColor: AppColors.primary,
-                    textColor: Colors.white,
+                  CustomText(
+                    text: '\$${99.19}',
+                    size: 32,
+                    fontWeight: FontWeight.w700,
                   ),
                 ],
               ),
-              Gap(10),
+              Spacer(),
+              CustomButton(
+                title: 'Checkout',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CheckoutView(),
+                    ),
+                  );
+                },
+                width: 200,
+                radius: 20,
+                backgroundColor: AppColors.primary,
+                textColor: Colors.white,
+              ),
             ],
           ),
         ),

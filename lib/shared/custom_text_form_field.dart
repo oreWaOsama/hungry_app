@@ -46,6 +46,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         return null;
       },
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
         suffixIcon: widget.obscureText == true
             ? GestureDetector(
                 onTap: _toggleObscureText,

@@ -77,37 +77,56 @@ class _ProductDetalisViewState extends State<ProductDetalisView> {
                 itemCount: 6,
               ),
             ),
-            Spacer(),
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: .start,
-                  children: [
-                    CustomText(
-                      text: 'Total',
-                      size: 24,
-                      fontWeight: FontWeight.w600,
-                    ),
-                    CustomText(
-                      text: '\$${18.19}',
-                      size: 32,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ],
-                ),
-                Spacer(),
-                CustomButton(
-                  title: 'Add To Cart',
-                  onPressed: () {},
-                  width: 200,
-                  radius: 20,
-                  backgroundColor: AppColors.primary,
-                  textColor: Colors.white,
-                ),
-              ],
-            ),
-            Gap(20),
           ],
+        ),
+      ),
+      bottomSheet: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade800,
+              blurRadius: 15,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+
+        height: 120,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Column(
+                crossAxisAlignment: .start,
+                children: [
+                  CustomText(
+                    text: 'Total',
+                    size: 24,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  CustomText(
+                    text: '\$${99.19}',
+                    size: 32,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ],
+              ),
+              Spacer(),
+              CustomButton(
+                title: 'Add to Cart',
+                onPressed: () {},
+                width: 200,
+                radius: 20,
+                backgroundColor: AppColors.primary,
+                textColor: Colors.white,
+              ),
+            ],
+          ),
         ),
       ),
     );

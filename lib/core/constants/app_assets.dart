@@ -11,4 +11,8 @@ class AppAssets {
   static const String plus = 'assets/details/plus.png';
   static const String cash = 'assets/icons/cash.png';
   static const String visa = 'assets/icons/visa.png';
+  static const String profileVisa = 'assets/icons/profile_visa.png';
+  static const String settings = 'assets/icons/settings.svg';
+  static const String edit = 'assets/icons/edit.svg';
+  static const String signOut = 'assets/icons/sign-out.svg';
 }
